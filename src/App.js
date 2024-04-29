@@ -8,7 +8,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Navbar from "./components/navbar"; // Import Navbar component
-import Login from "./components/login";
+import Login from "./components/login"; // Import Login component
 import SignUp from "./components/register";
 import Profile from "./components/profile";
 import { ToastContainer } from "react-toastify";

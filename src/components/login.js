@@ -1,28 +1,22 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
-import { auth } from "./firebase";
-import { toast } from "react-toastify";
-import "../App.css"; 
+import { Link, useNavigate } from "react-router-dom"; // Importing Link and useNavigate from react-router-dom
+import { auth } from "./firebase"; // Importing auth from firebase
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Initializing useNavigate
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      await auth.signInWithEmailAndPassword(email, password); // Using auth.signInWithEmailAndPassword instead of signInWithEmailAndPassword
       console.log("User logged in Successfully");
-      window.location.href = "/profile";
-      toast.success("User logged in Successfully", {
-        position: "top-center",
-      });
+      // Use navigate to navigate to the profile page
+      navigate("/profile");
     } catch (error) {
       console.log(error.message);
-
-      toast.error(error.message, {
-        position: "bottom-center",
-      });
+      // Handling error
     }
   };
 
@@ -58,7 +52,7 @@ function Login() {
         </button>
       </div>
       <p className="forgot-password text-right">
-        עוד לא נרשמת? <a href="/register">הרשם כאן</a>
+        עוד לא נרשמת? <Link to="/register">הרשם כאן</Link>
       </p>
     </form>
   );
