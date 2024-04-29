@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import { Link } from "react-router-dom"; 
 
 function Navbar({ toggleMenu }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +38,6 @@ function Navbar({ toggleMenu }) {
                 {selectedCourse === "basic" && (
                   <div className="course-lessons">
                     <ul>
-                      {/* Use Link instead of anchor tag */}
                       <li><Link to="/basic01">משקלים והוצאת מכה</Link></li>
                       <li><Link to="/basic02">עמידת איגרוף</Link></li>
                       <li><Link to="/basic03">תזוזה נכונה</Link></li>

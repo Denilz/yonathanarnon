@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { auth, db } from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
-import Navbar from "../components/navbar.js"; // Import Navbar component from navbar.js
-import { Link } from "react-router-dom"; // Import Link from React Router
+import Navbar from "../components/navbar"; 
+import { Link } from "react-router-dom"; 
 
 function Profile() {
   const [userDetails, setUserDetails] = useState(null);
@@ -38,7 +38,7 @@ function Profile() {
 
   return (
     <div>
-      <Navbar /> {/* Render Navbar component */}
+      <Navbar />
       {userDetails ? (
         <>
           <h3 className="main-heading" style={{ color: "white", textAlign: "right" }}>
