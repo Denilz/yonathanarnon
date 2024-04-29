@@ -32,7 +32,7 @@ function Navbar({ toggleMenu }) {
       {isOpen && (
         <div className="options-menu megamenu">
           <ul>
-            <li className="course-item" onClick={() => handleCourseClick("basic")} className={selectedCourse === "basic" ? "selected" : ""}>
+          <li className={`course-item ${selectedCourse === "basic" ? "selected" : ""}`} onClick={() => handleCourseClick("basic")}>
               <div className="course-details">
                 <h3 className="course-name">קורס בסיס</h3>
                 {selectedCourse === "basic" && (
@@ -64,13 +64,13 @@ function Navbar({ toggleMenu }) {
                 )}
               </div>
             </li>
-            <li className="course-item" onClick={() => handleCourseClick("beginners")} className={selectedCourse === "beginners" ? "selected" : ""}>
+            <li className={`course-item ${selectedCourse === "beginners" ? "selected" : ""}`} onClick={() => handleCourseClick("beginners")}>
               <h3 className="course-name">קורס מתחילים</h3>
               {showComingSoon && selectedCourse === "beginners" && (
                 <p>בקרוב</p>
               )}
             </li>
-            <li className="course-item" onClick={() => handleCourseClick("advanced")} className={selectedCourse === "advanced" ? "selected" : ""}>
+            <li className={`course-item ${selectedCourse === "advanced" ? "selected" : ""}`} onClick={() => handleCourseClick("advanced")}>
               <h3 className="course-name">קורס מתקדמים</h3>
               {showComingSoon && selectedCourse === "advanced" && (
                 <p>בקרוב</p>

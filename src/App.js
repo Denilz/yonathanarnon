@@ -6,7 +6,6 @@ import {
   Routes,
   Route,
   Navigate,
-  Link // Import Link from react-router-dom
 } from "react-router-dom";
 import Navbar from "./components/navbar"; // Import Navbar component
 import Login from "./components/login";
