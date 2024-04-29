@@ -1,0 +1,118 @@
+/* Default styles */
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  height: 100%; /* Ensure body covers the entire viewport height */
+}
+
+#root {
+  height: 100%; /* Ensure root element covers the entire viewport height */
+}
+
+.basic-lesson-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.lesson-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lesson-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-container {
+  margin-bottom: 20px;
+  position: relative; /* Set position to relative */
+  width: 100%; /* Ensure the video container takes the full width */
+  height: 0; /* Set initial height to 0 */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (height / width * 100%) */
+}
+
+.video-container iframe {
+  position: absolute; /* Set position to absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text-content {
+  margin-bottom: 20px;
+  color: #FCFCFC;
+  text-align: right; /* Added */
+}
+
+.lesson-button {
+  padding: 10px 20px;
+  background-color: #D52941;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.lesson-button:hover {
+  background-color: #a81d33;
+}
+
+h1, p {
+  color: #FCFCFC;
+}
+
+/* Media queries for tablet */
+@media (max-width: 768px) {
+  .basic-lesson-container {
+    padding: 10px;
+  }
+
+  .lesson-header {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .video-container {
+    margin-bottom: 15px;
+  }
+
+  .text-content {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .lesson-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Media queries for mobile */
+@media (max-width: 480px) {
+  .basic-lesson-container {
+    padding: 5px;
+  }
+
+  .lesson-header {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .video-container {
+    margin-bottom: 10px;
+  }
+
+  .text-content {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .lesson-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

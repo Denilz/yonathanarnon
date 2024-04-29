@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+.App {
+  text-align: center;
+}
+
+body {
+  /* Remove default margin and padding */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-family: "Heebo";
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #FCFCFC;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form-login {
+  text-align: right;
+  font-family: "Heebo";
+  color: #FCFCFC;
+}
+
+.h1-login {
+  margin-bottom: 44px;
+  color: #FCFCFC;
+  font-size: 28px;
+}
+
+.btn-primary {
+  background-color: #D52941;
+  border-color: #FCFCFC;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #e50523;
+}
+
+.boxes-container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+.box {
+  width: calc(33.33% - 10px);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #FCFCFC;
+  transition: all 0.3s ease;
+}
+
+/* .box:hover {
+  transform: scale(1.05);
+  border-color: #D52941;
+} */
+
+.box p {
+  color: #070707;
+  font-weight: 600;
+}
+
+.box button {
+  width: 100%;
+}
+
+.box:nth-child(1) {
+  background-color: #D52941;
+  order: 3; /* Set order to display first */
+}
+
+.box:nth-child(2) {
+  order: 2; /* Set order to display second */
+  background-color: #FCFCFC;
+}
+
+.box:nth-child(3) {
+  order: 1; /* Set order to display third */
+  background-color: #FCFCFC;
+}
+
+.box .course-description1 {
+  color: white;
+  font-weight: 500;
+}
+
+.box .course-description2,
+.box .course-description3 {
+  color: #D52941;
+  font-weight: 500;
+}
+
+.burger-icon {
+  position: fixed;
+  top: 20px; /* Adjust the top position as needed */
+  right: 20px; /* Position on the right side */
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it's above other content */
+  background-color: #070707;
+  border: 4px solid #070707;
+  border-radius: 5px;
+}
+
+.bar {
+  width: 24px;
+  height: 2px;
+  background-color: #FCFCFC; /* Change the background color */
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.burger-icon.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-icon.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-icon.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navbar {
+  background-color: #070707;
+}
+
+.navbar-container {
+  position: relative; /* Change position to relative */
+  display: inline-block; /* Ensure it behaves like a block element */
+}
+
+.options-menu {
+  position: fixed;
+  top: 60px; /* Adjust the top position based on the height of the navbar */
+  right: 20px; /* Align with the right side of the viewport */
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 999; /* Ensure it's above other content */
+  /* background-color: #fff; Set background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  text-align: right;
+  background-color: #D52941;
+  border: 1px #FCFCFC solid;
+  font-family: "Heebo";
+}
+
+.options-menu ul {
+  list-style-type: none;
+  margin: 0; /* Remove default margin */
+}
+
+.options-menu ul li {
+  padding: 20px; /* Keep consistent padding for all menu items */
+  border-radius: 8px;
+}
+
+
+
+.course-image {
+  width: 40px; /* Adjust the width of the images as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 26px;
+}
+
+@media screen and (max-width: 768px) {
+  .App-header {
+    min-height: auto; /* Adjust the height to fit content */
+  }
+
+  .boxes-container {
+    flex-direction: column-reverse; /* Reverse the order of the boxes */
+    align-items: center; /* Center-align items */
+  }
+
+  .box {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #FCFCFC;
+    transition: all 0.3s ease;
+  }
+
+  /* .box:hover {
+    transform: scale(1.05);
+    border-color: #D52941;
+  } */
+
+  .box p {
+    font-size: 14px;
+  }
+
+  .form-login {
+    text-align: center; /* Center-align form elements */
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .App-header {
+    min-height: auto; /* Adjust the height to fit content */
+  }
+  
+  .boxes-container {
+    display: flex;
+    flex-direction: column-reverse; /* Reverse the order of the boxes */
+    align-items: center; /* Center-align items */
+    margin: -10px;
+    margin-top: 4px;
+  }
+
+  .box {
+    width: calc(100% - 20px); /* Set width to 100% minus the margin */
+    margin: 5px 0;
+    padding: 4px; /* Reduced padding for smaller screens */
+    border-radius: 5px;
+    border: 2px solid #FCFCFC;
+    transition: all 0.3s ease;
+  }
+
+  /* .box:hover {
+    transform: scale(1.05);
+    border-color: #D52941;
+  } */
+
+  /* .box p {
+    font-size: 14px;
+  } */
+
+  .form-login {
+    text-align: center; /* Center-align form elements */
+  }
+}
+
+.options-menu {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 999;
+  background-color: #D52941;
+  border: 1px #FCFCFC solid;
+  font-family: "Heebo";
+  max-height: calc(100vh - 120px); /* Set maximum height to allow scrolling */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
+}
+
+.options-menu ul li {
+  /* background-color: #D52941;  */
+  padding: 8px;
+}
+
+.options-menu ul li .course-name {
+  color: #FCFCFC;; /* Change text color on hover */
+  font-weight: bold; /* Make the course name bold */
+  text-align: right;
+}
+
+.options-menu ul li .course-name:hover {
+  color: #070707;; /* Change text color on hover */
+  font-weight: bold; /* Make the course name bold */
+}
+
+.options-menu ul li a {
+  color: #070707; /* Set the default link color */
+  text-decoration: none; /* Remove underline from links */
+  padding: 4px;
+  /* font-weight: 600; */
+  font-size: 18px;
+}
+
+.options-menu ul li a:hover {
+  color: #FCFCFC; /* Change link color on hover */
+  border: 2px #FCFCFC solid;
+  border-radius: 5px;
+  /* margin: 12px; */
+}
+
+.course-item {
+  position: relative; /* Make the position relative to allow positioning of pseudo-element */
+  padding: 20px 0; /* Adjust padding as needed */
+
+  /* Add styles for the line */
+}
+
+.course-item {
+  padding: 20px 0; /* Adjust padding as needed */
+}
+
+.course-item:not(:last-child) {
+  border-bottom: 1px solid #FCFCFC; /* Add a bottom border with color FCFCFC */
+}
+
+
+.logo2 {
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #D52941, #ff6f00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Arial, sans-serif; /* Change font family as needed */
+  margin-left: 10px;
+}
+
+
