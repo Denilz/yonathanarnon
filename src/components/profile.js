@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { auth, db } from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
-import { toast } from "react-toastify";
 import Navbar from "../components/navbar"; 
 import { Link } from "react-router-dom"; 
 

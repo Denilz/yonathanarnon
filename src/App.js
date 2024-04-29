@@ -15,7 +15,6 @@ import Profile from "./components/profile";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth } from "./components/firebase";
-import Test from "./components/Test"; // Import Test component
 import Basic01 from "./components/basiccourse/Basic01";
 import Basic02 from "./components/basiccourse/basic02";
 import Basic03 from "./components/basiccourse/basic03";
@@ -41,7 +40,6 @@ import Basic21 from "./components/basiccourse/basic21";
 
 // Import your background image
 import yonathanbg from "./images/yonathanbg.jpg";
-import greenImage from "./images/green.png"; // Import logo
 
 function App() {
   const [user, setUser] = useState(null);
